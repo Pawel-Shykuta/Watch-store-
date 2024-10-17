@@ -1,0 +1,550 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    width: auto; 
+    height: auto;
+    text-align: center; 
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.FirstPost{
+    margin-top: 5%;
+    font-size: 25px;
+    font-weight: 400;
+    color: rgb(104, 103, 103);
+    overflow: hidden;
+}
+
+
+
+
+                            /* Header*/
+.Orange{
+    color: rgba(219, 153, 30, 0.911);
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.LinksContainer{
+    width: 50%;
+    height: 40px;
+    border-top: 1px solid rgb(182, 177, 177);
+    border-bottom: 1px solid rgb(182, 177, 177);
+    display: flex;
+}
+
+.table{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.links{
+    text-decoration: none;
+    margin-left: 5%;
+    margin-right:5%;
+    list-style-type: none;
+}
+
+.links a{
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    font-size: 17px;
+    font-weight: 400;
+    transition: all .4s ease;
+}
+
+.links a:hover{
+    color: rgba(219, 153, 30, 0.911);
+}
+
+.header_burger_btn{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    display: none;
+    margin-left: 40%;
+    margin-top: 5%;
+    z-index: 2;
+}
+
+                   /* BURGER */
+
+#burger {
+    display: none;
+    background-color:white;
+    border: none;
+    cursor: pointer;
+    position: absolute; /* Изменено на absolute для позиционирования внутри контейнера */
+    width: 30px;
+    height: 30px;
+    top: 20px; /* Расположение по вертикали */
+    right: 20px; /* Расположение по горизонтали */
+    z-index: 20; /* Обеспечивает, что бургер-меню будет поверх других элементов */
+}
+
+#burger::before,
+#burger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(100, 99, 99);
+    transition: transform 0.3s, opacity 0.3s; /* Добавлено opacity для плавного исчезновения middle line */
+}
+
+#burger::before {
+    top: 8px;
+}
+
+#burger::after {
+    top: 20px;
+}
+
+#burger.open::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#burger.open::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+        /* mainContant */
+
+.warpper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+        
+.mainContant{
+    width: 50%;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btnCon{
+    width: 100%;
+    display: flex;
+    justify-content: end; 
+}
+
+.Strel{
+    width: 70px;
+    height: 30px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    position: relative;
+    right: 0;
+    transition: all .3s ease;
+}
+
+.Strel:hover{
+    opacity: .5;
+}
+
+
+   /* Towar */
+.container{
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+}
+ 
+.towar{
+    width: 50%;
+    border: 1px solid silver;
+    height: 30%;
+}
+.Foto{
+    width: 100%;
+    border: none;
+}
+.TowarInfo{
+    margin-left: 3%;
+    width: 40%;
+    float: right;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    color: rgb(80, 79, 79);
+}
+
+
+.TowarInfo h1{
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.TowarInfo h2{
+    font-size: 15px;
+    line-height: 15px;
+}
+.TowarInfo h3{
+    font-size: 15px;
+    font-weight: 200;
+}
+
+input{
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#by{
+    width: 250px;
+    height: 40px;
+    border: none;
+    color: white;
+    background-color: orange;
+    margin-top: 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all .5s ease;
+    font-size: 18px;
+}
+
+#by:hover{
+    background-color: rgb(185, 122, 4);
+}
+
+summary {
+    list-style: none; 
+    cursor: pointer; 
+    margin-bottom: 20px;
+    width: 70%;
+    border-bottom: 1px solid silver;
+}
+
+.First{
+    margin-top: 40px;
+    
+}
+
+summary::-webkit-details-marker {
+    display: none; /* Убирает стрелку в вебкит-браузерах (Chrome, Safari) */
+}
+
+summary::before {
+    content: ''; /* Вы можете добавить свой собственный контент здесь, если хотите */
+    /* Например, добавьте свой значок или стиль */
+    display: inline-block; 
+    width: 10px; 
+    height: 10px; 
+    background-color:white; /* Цвет вашей стрелки или значка */
+    margin-right: 5px; /* Отступ между значком и текстом */
+}
+
+summary::after {
+    position: relative;
+    margin-left: 50px;
+    content: '+';
+}
+
+summary.First::after {
+    position: relative;
+    margin-left: 147px;
+    content: '+';
+}
+
+summary.OpenS::after {
+    content: '-';
+}
+
+
+            /* Footer */
+
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top:1px solid rgba(0, 0, 0, 0.164) ;
+}
+.footerText{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+@media (max-width:450px){
+
+    .Zag{
+        display: flex;
+    }
+
+    .Zag h1{
+        width: 60%;
+        margin-left: 10%;
+        color: rgb(59, 59, 59);
+        font-size: 15px;
+    }
+    #burger {
+        display: block;
+    }
+
+                        /* Header*/
+
+    .header_burger_btn{
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-color: rgb(255, 255, 255);
+            border: none;
+            outline: none;
+            right: 10px;
+            margin-left: 40%;
+            margin-top: 5%;
+        }
+
+
+    .header{
+        width: 100%;
+        display: flex;
+        position: relative;
+    
+    }    
+        
+    .LinksContainer{
+        width: 99%;  
+        height: 550px;
+        position: relative;
+        right: -100%;
+        background-color: white;
+        z-index: 2;
+    }
+
+    .FirstPost{
+        font-size: 20px;
+    }
+
+    .table{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .links{
+        margin: 10px;
+    }
+    .links a{
+        font-size: 20px;
+    }
+
+
+
+
+
+   /* Towar */
+
+.warpper{
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    height: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+  
+}
+        
+.mainContant{
+    width: 99%;
+    margin-top: 2%;
+    display: block;
+}
+
+.btnCon{
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+.Strel{
+    width: 70px;
+    height: 30px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    position: relative;
+    right: 0;
+}
+
+   /* Towar */
+.container{
+    margin-top: 15%;
+    width: 100%;
+    display: block;
+}
+ 
+.towar{
+    width: 90%;
+    border: 1px solid silver;
+    height: 30%;
+    margin-left: 5%;
+    
+}
+.Foto{
+    width: 100%;
+    border: none;
+}
+
+        /* TowarInfo */ 
+.TowarInfo{
+    margin-left: 0;
+    width: 99%;
+    float: left;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: rgb(80, 79, 79);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+
+
+.TowarInfo h1{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: -100%;
+    margin-bottom: 100%;
+}
+    
+.TowarInfo h2{
+    width: 90%;
+    display: flex;
+    font-size: 20px;
+    line-height: 15px;
+    align-items:start;
+}
+.TowarInfo h3{
+    font-size: 20px;
+    font-weight: 200;
+}
+
+input{
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#by{
+    width: 250px;
+    height: 40px;
+    border: none;
+    color: white;
+    background-color: orange;
+    margin-top: 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all .5s ease;
+    font-size: 18px;
+}
+
+#by:hover{
+    background-color: rgb(185, 122, 4);
+}
+
+details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+summary {
+    list-style: none; 
+    cursor: pointer; 
+    margin-bottom: 20px;
+    width: 100%;
+    border-bottom: 1px solid silver;
+    font-size: 21px;
+    text-align: left;
+}
+details p{
+    font-size: 17px;
+    width: 90%;
+    margin-left: 5%;
+}
+.First{
+    margin-top: 40px;
+}
+
+summary::-webkit-details-marker {
+    display: none; /* Убирает стрелку в вебкит-браузерах (Chrome, Safari) */
+}
+
+summary::before {
+    content: ''; /* Вы можете добавить свой собственный контент здесь, если хотите */
+    /* Например, добавьте свой значок или стиль */
+    display: inline-block; 
+    width: 10px; 
+    height: 10px; 
+    background-color:white; /* Цвет вашей стрелки или значка */
+    margin-right: 5px; /* Отступ между значком и текстом */
+}
+
+summary::after {
+    position: relative;
+    margin-left: 20px;
+    content: '+';
+}
+
+summary.First::after {
+    position: relative;
+    margin-left: 147px;
+    content: '+';
+}
+
+summary.OpenS::after {
+    content: '-';
+}
+
+
+
+.footer{
+display: none;
+}
+
+}

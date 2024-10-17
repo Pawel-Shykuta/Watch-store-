@@ -1,0 +1,419 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%; 
+    height: 100%;
+    text-align: center; 
+    font-family: 'Roboto', sans-serif;
+}
+
+.FirstPost{
+    margin-top: 5%;
+    font-size: 25px;
+    font-weight: 400;
+    color: rgb(104, 103, 103);
+}
+
+
+                            /* Header*/
+.Orange{
+    color: rgba(219, 153, 30, 0.911);
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.LinksContainer{
+    width: 50%;
+    height: 40px;
+    border-top: 1px solid rgb(182, 177, 177);
+    border-bottom: 1px solid rgb(182, 177, 177);
+    display: flex;
+}
+
+.table{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.links{
+    text-decoration: none;
+    margin-left: 5%;
+    margin-right:5%;
+    list-style-type: none;
+}
+
+.links a{
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    font-size: 17px;
+    font-weight: 400;
+    transition: all .4s ease;
+}
+
+.links a:hover{
+    color: rgba(219, 153, 30, 0.911);
+}
+
+.header_burger_btn{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    display: none;
+    margin-left: 40%;
+    margin-top: 5%;
+    z-index: 2;
+}
+
+                   /* BURGER */
+
+#burger {
+    display: none;
+    background-color:white;
+    border: none;
+    cursor: pointer;
+    position: absolute; /* Изменено на absolute для позиционирования внутри контейнера */
+    width: 30px;
+    height: 30px;
+    top: 20px; /* Расположение по вертикали */
+    right: 20px; /* Расположение по горизонтали */
+    z-index: 20; /* Обеспечивает, что бургер-меню будет поверх других элементов */
+}
+
+#burger::before,
+#burger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(100, 99, 99);
+    transition: transform 0.3s, opacity 0.3s; /* Добавлено opacity для плавного исчезновения middle line */
+}
+
+#burger::before {
+    top: 8px;
+}
+
+#burger::after {
+    top: 20px;
+}
+
+#burger.open::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#burger.open::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+            /* contactsForm */
+
+.contactsForm{
+    margin-top: 3%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+
+
+.information{
+    display: flex;
+    width: 50%;
+    margin-top: 0;
+    text-align: left;
+    justify-content: start;
+}
+
+.information h2{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: left;
+}
+
+.bord{
+    width: 20%;
+    order: 1px solid red;
+    margin: 3%;
+}
+iframe{
+    width: 40%;
+    height: 250px;
+    border: none;
+    margin: 3%;
+}
+
+
+.form{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-bottom: 15px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    margin: 3%;
+}
+
+input{
+    width: 90%;
+    display: block;
+    height: 29px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.form h1{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#buttonSub{
+    width: 90%;
+    height: 25px;
+    border: 1px solid black;
+    background-color:black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+#buttonSub:hover{
+    background-color:white;
+    border: 1px solid black;
+    color: white;
+}
+
+           /* Footer */
+.footer{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top:1px solid rgba(0, 0, 0, 0.164) ;
+    margin-top: auto;
+}
+.footerText{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+
+
+
+@media (max-width:450px){
+
+    .Zag{
+        display: flex;
+        width: 100%;
+    }
+    .FirstPost{
+        width: 100%;
+        margin-top: 5%;
+        font-size: 25px;
+        font-weight: 400;
+        color: rgb(104, 103, 103);
+    }
+
+    .Zag h1{
+        width: 60%;
+        margin-left: 15%;
+        color: rgb(59, 59, 59);
+        font-size: 15px;
+    }
+    #burger {
+        margin-top: -15px;
+        display: block;
+    }
+
+                        /* Header*/
+
+    .header_burger_btn{
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-color: rgb(255, 255, 255);
+            border: none;
+            outline: none;
+            right: 10px;
+            margin-left: 40%;
+            margin-top: 5%;
+        }
+
+
+    .header{
+        width: 100%;
+        display: flex;
+        position: relative;
+    
+    }    
+        
+    .LinksContainer{
+        width: 99%;  
+        height: 550px;
+        position: relative;
+        right: -100%;
+        background-color: white;
+        z-index: 2;
+    }
+
+    .FirstPost{
+        font-size: 20px;
+    }
+
+    .table{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .links{
+        margin: 10px;
+    }
+    .links a{
+        font-size: 20px;
+    }
+
+
+               /* contactsForm */
+
+.contactsForm{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20%;
+}
+
+.information{
+    width: 90%;
+    margin-top: -020px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.hk{
+    font-size: 20px;
+    font-weight: 400;
+    width: 100%;
+    border-bottom: 1px solid silver;
+}
+
+iframe{
+    width: 100%;
+    height: 250px;
+    border: 2px solid silver;
+    border-radius: 5px;
+    margin-top:0;
+    margin-left:0;
+}
+
+.bord{
+    width: 80%;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.bord h2{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.form{
+    width: 100%;
+    margin-top: 15px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    margin-left: -1%;
+    margin-bottom: 30px;
+}
+
+input{
+    width: 80%;
+    display: block;
+    height: 29px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.form h1{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top:20px ;
+}
+
+#buttonSub{
+    width: 60%;
+    height: 25px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s ease;
+    color: black;
+    font-weight: 500;
+}
+
+#buttonSub:hover{
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+}
+
+            /* Footer */
+
+.footer{
+   display: none;
+}
+
+
+}

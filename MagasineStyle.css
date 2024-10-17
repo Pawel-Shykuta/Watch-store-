@@ -1,0 +1,378 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%; 
+    height: 100%;
+    text-align: center; 
+    font-family: 'Roboto', sans-serif;
+}
+
+.FirstPost{
+    margin-top: 5%;
+    font-size: 25px;
+    font-weight: 400;
+    color: rgb(104, 103, 103);
+}
+
+
+                            /* Header*/
+.Orange{
+    color: rgba(219, 153, 30, 0.911);
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.LinksContainer{
+    width: 50%;
+    height: 40px;
+    border-top: 1px solid rgb(182, 177, 177);
+    border-bottom: 1px solid rgb(182, 177, 177);
+    display: flex;
+}
+
+.table{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.links{
+    text-decoration: none;
+    margin-left: 5%;
+    margin-right:5%;
+    list-style-type: none;
+}
+
+.links a{
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    font-size: 17px;
+    font-weight: 400;
+    transition: all .4s ease;
+}
+
+.links a:hover{
+    color: rgba(219, 153, 30, 0.911);
+}
+
+.header_burger_btn{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    display: none;
+    margin-left: 40%;
+    margin-top: 5%;
+    z-index: 2;
+}
+
+                   /* BURGER */
+
+#burger {
+    display: none;
+    background-color:white;
+    border: none;
+    cursor: pointer;
+    position: absolute; /* Изменено на absolute для позиционирования внутри контейнера */
+    width: 30px;
+    height: 30px;
+    top: 20px; /* Расположение по вертикали */
+    right: 20px; /* Расположение по горизонтали */
+    z-index: 20; /* Обеспечивает, что бургер-меню будет поверх других элементов */
+}
+
+#burger::before,
+#burger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(100, 99, 99);
+    transition: transform 0.3s, opacity 0.3s; /* Добавлено opacity для плавного исчезновения middle line */
+}
+
+#burger::before {
+    top: 8px;
+}
+
+#burger::after {
+    top: 20px;
+}
+
+#burger.open::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#burger.open::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+                    /* Magasine */
+
+.Magasine{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.Magasinecontainer{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    margin-left: 10%;
+}
+.items{
+    width: 50%;
+    right: 0;
+    position: relative;
+    margin-top: 3%;
+    display: flex;
+}
+.Side{
+    width: 160px;
+    height: 40px;
+    position: absolute;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    left: 25%;
+    margin-top: 5%;
+    border-bottom: 1px solid silver;
+}
+.Side h1{
+    font-size: 25px;
+    font-weight: 400;
+}
+.container{
+    width: 100%;  
+    display: flex;
+    flex-direction: column;  
+    position: relative;
+    align-items: center;
+}
+
+.block{
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: silver;
+    opacity: 0;
+    color: black;
+    position: absolute;
+    margin-top: 60%;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.container:hover .block{
+    opacity: .7;
+}
+.img{
+    width: 80%;
+}
+
+            /* Footer */
+.footer{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top:1px solid rgba(0, 0, 0, 0.164) ;
+}
+.footerText{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 400;
+}
+@media (max-width:450px){
+
+    .Zag{
+        display: flex;
+    }
+
+    .Zag h1{
+        width: 60%;
+        margin-left: 10%;
+        color: rgb(59, 59, 59);
+        font-size: 15px;
+    }
+    #burger {
+        display: block;
+    }
+
+                        /* Header*/
+
+    .header_burger_btn{
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-color: rgb(255, 255, 255);
+            border: none;
+            outline: none;
+            right: 10px;
+            margin-left: 40%;
+            margin-top: 5%;
+        }
+
+
+    .header{
+        width: 100%;
+        display: flex;
+        position: relative;
+    
+    }    
+        
+    .LinksContainer{
+        width: 99%;  
+        height: 550px;
+        position: relative;
+        right: -100%;
+        background-color: white;
+        z-index: 2;
+    }
+
+    .FirstPost{
+        font-size: 20px;
+    }
+
+    .table{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .links{
+        margin: 10px;
+    }
+    .links a{
+        font-size: 20px;
+    }
+
+                /* Magasine */
+
+    .Magasine{
+        width: 100%;
+        position: relative;
+        display: flex;
+        margin-top: -140%;
+    }
+    
+    
+    .Magasinecontainer{
+        width: 100%;
+        display: block;
+        margin-left: 0;
+    }
+
+    .Side{
+        width: 200px;
+        height: 40px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10%;
+        border-bottom: 1px solid silver;
+    }
+    .Side h1{
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    .items{
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .container{
+        width: 80%;  
+        display: flex;
+        flex-direction: column;  
+        position: relative;
+        align-items: center;
+        margin-top: 10%;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+        border-width: 1px 2px 2px 1px;
+        border-style: solid;
+        border-color: silver;
+        transition: all .5s ease;
+    }
+    
+    .container:active{
+        width: 85%;
+    }
+
+    .block{
+        width: 70px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: silver;
+        opacity: 0.6;
+        color: black;
+        position: absolute;
+        margin-top: 79%;
+        cursor: pointer;
+        transition: all .5s ease;
+        z-index: 1;
+    }
+    .block h3{
+        font-size: 15px;
+        font-weight: 200;
+    }
+    
+    .container:hover .block{
+        opacity: 0;
+    }
+    .img{
+        width: 80%;
+    }
+
+            /* Footer */
+
+.footer{
+    margin-top: 20px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top:2px solid rgba(0, 0, 0, 0.164) ;
+}
+.footerText{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 400;
+}
+}
